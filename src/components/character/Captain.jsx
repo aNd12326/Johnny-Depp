@@ -4,13 +4,13 @@ import styled from 'styled-components'
 const Captain = (props) => {
     return (
         <Container>
-            <img
+            <Imagen
                 src={require(`../../images/${props.imagen}.jpg`)}
                 alt='captain'
             />
-            <div className='contenedor-texto-testimonio'>
+            <ContenedorTxtTestimonio className='contenedor-texto-testimonio'>
                 <p className='nombre-testimonio'>
-                    <strong>{props.nombre}</strong> en <strong>{props.pais}</strong>
+                    <strong>{props.nombre}</strong> de <strong>{props.pais}</strong>
                 </p>
                 <p className='cargo-testimonio'>
                     {props.cargo} de <strong>{props.empresa}</strong>
@@ -18,45 +18,64 @@ const Captain = (props) => {
                 <p className='texto-testimonio'>
                     "{props.testimonio}"
                 </p>
-            </div>
+            </ContenedorTxtTestimonio>
         </Container>
     )
 }
 
 const Container = styled.div`
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 60px;
 
-    width: 700px;
+    contenedorTxtTestimonio{
+        padding: 20px;
+    } */
+
+    width: 1170px;
     height: 368px;
-    margin: 10px 10px 50px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+    margin-top: 60px;
 
-    img{
-        height: 100%;
-        width: auto;
+    .nombre-testimonio {
+        font-size: 1.3rem;
     }
-
-    .contenedor-texto-testimonio{
-        text-align: center;
-    padding: 40px;
-    font-family: Lato, sans-serif;
-    font-weight: 400;
-    line-height: 1.5rem;
-    }
-
+    
     .cargo-testimonio {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    padding-bottom: 30px;
+        font-size: 1.3rem;
+        margin-top: 15px;
+        padding-bottom: 30px;
     }
 
     .texto-testimonio {
-    font-size: 1.1rem;
-    text-align: justify;
-    }
+        font-size: 1.1rem;
+        text-align: justify;
+    }   
+`
+
+const Imagen = styled.img`
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%
+`
+
+const ContenedorTxtTestimonio = styled.div`
+        text-align: center;
+        padding: 40px;
+        font-family: Lato, sans-serif;
+        font-weight: 400;
+        line-height: 1.5rem;
 `
 
 export default Captain

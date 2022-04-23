@@ -65,6 +65,14 @@ const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
+    background-color: #24252a;
+
+    @media (max-width: 428px){
+        nav{
+            display: block;
+            width: 100%;
+        }
+    }
 `;
 
 const Logo = styled.h1`

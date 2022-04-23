@@ -1,17 +1,17 @@
 import React from 'react'
 import Captain from './Captain'
+import styled from 'styled-components'
 
 const Testimony = () => {
   return (
-    <div>
-        <h1>Jack Sparrow</h1>
+    <div className='container-character'>
         <Captain 
             nombre='Johnny Depp'
             pais='USA'
             imagen='jack-sparrow'
             cargo='actor'
             empresa='Hollywood'
-            testimonio= 'Da miedo cambiar de carrera. Solo gané la confianza de que podía programar trabajando en los cientos de horas de lecciones gratuitas en freeCodeCamp. En un año tenía un trabajo de seis cifras como ingeniero de software. freeCodeCamp cambió mi vida'
+            testimonio= 'John Christopher Depp II es un actor, productor, guionista y músico estadounidense. Ha sido nominado en tres ocasiones al Óscar y recibió un Globo de Oro, un premio del Sindicato de Actores y un César.'
         />
     </div>
   )
